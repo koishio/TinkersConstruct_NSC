@@ -38,9 +38,15 @@ public class ToolDataNBT extends ModDataNBT {
    * @param add    Value to add, use negative to remove
    */
   public void addSlots(SlotType type, int add) {
+    // Prevent decreasing the slot
+    if (add > 0) {
+      setSlots(type, getSlots(type) + add);
+    }
+    /* original code:
     if (add != 0) {
       setSlots(type, getSlots(type) + add);
     }
+    */
   }
 
 
