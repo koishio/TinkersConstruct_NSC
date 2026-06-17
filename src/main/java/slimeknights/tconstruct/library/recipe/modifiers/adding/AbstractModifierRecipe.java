@@ -254,6 +254,9 @@ public abstract class AbstractModifierRecipe implements ITinkerStationRecipe, ID
    */
   @Nullable
   protected static Component checkSlots(IToolStackView tool, @Nullable SlotCount slots) {
+    // Cancel error message
+    return null;
+    
     if (slots != null) {
       int count = slots.count();
       if (tool.getFreeSlots(slots.type()) < count) {
