@@ -257,6 +257,7 @@ public abstract class AbstractModifierRecipe implements ITinkerStationRecipe, ID
     // Cancel error message
     return null;
     
+    /* original code
     if (slots != null) {
       int count = slots.count();
       if (tool.getFreeSlots(slots.type()) < count) {
@@ -268,6 +269,7 @@ public abstract class AbstractModifierRecipe implements ITinkerStationRecipe, ID
       }
     }
     return null;
+    */
   }
 
   /**
