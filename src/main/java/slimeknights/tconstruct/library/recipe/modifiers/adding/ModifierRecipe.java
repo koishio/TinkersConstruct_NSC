@@ -151,11 +151,14 @@ public class ModifierRecipe extends AbstractModifierRecipe {
 
     // consume slots
     tool = tool.copy();
+    
+    /* original
     ToolDataNBT persistentData = tool.getPersistentData();
     SlotCount slots = getSlots();
     if (slots != null) {
       persistentData.addSlots(slots.type(), -slots.count());
     }
+    */
 
     // add modifier
     tool.addModifier(result.getId(), 1);
